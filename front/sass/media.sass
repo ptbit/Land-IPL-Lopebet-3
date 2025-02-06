@@ -262,6 +262,7 @@
       padding: 50px 20px 0
     &__players
       width: 1000px
+      right: -50px
 @media screen and (max-width: 1280px) and (max-height: 650px)
   .land
     &__welcome
@@ -310,8 +311,10 @@
     &__partners
       padding-right: 40px
     &__players
-      width: 1080px
-      right: -110px
+      width: 990px
+      right: -60px
+@media screen and (max-width: 1205px) and (max-height: 585px)
+
 @media screen and (max-width: 1180px) and (max-height: 820px) //ipad air
   .land
     &__welcome
@@ -747,6 +750,7 @@
       width: 100px
       height: 140px
       z-index: 3
+      right: -30px
     &__welcome
       z-index: 2
       background: url('../img/cricket-mob.svg') no-repeat 0 0/contain
@@ -798,6 +802,20 @@
         border-radius: 50%
         border: transparent
         box-shadow: 0 0 90px 95px rgba($magenta,1)
+@media screen and (max-width: 585px) and (max-height: 1205px) and (orientation: portrait) // 
+  .land
+    &__welcome
+      transform: scale(1)
+      top: 120px
+      padding-top: 30px
+    &__players
+      bottom: 60px
+    &__footer
+      transform: translate(-50%) scale(1.1)
+    &__partners
+      margin-top: 40px
+    &__description
+      margin-bottom: 10px
 @media screen and (max-width: 412px) and (max-height: 914px) and (orientation: portrait) // A51
   .land
     &__welcome
