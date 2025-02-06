@@ -384,6 +384,7 @@
   .land
     &__players
       width: 930px
+      right: -60px
     &__partners
       padding-right: 20px
 @media screen and (max-width: 1024px) and (max-height: 768px) // nest tab, ipad mini
@@ -395,6 +396,8 @@
       transform: scale(1)
 @media screen and (max-width: 1010px) and (max-height: 810px)
   .land
+    &__welcome
+      height: 120%
     &__players
       width: 930px
     &__partners
@@ -448,6 +451,9 @@
       left: 10px
       height: 130%
       transform: scale(0.6)
+    &__players
+      width: 860px
+      right: -70px
 
 @media screen and (max-width: 896px) and (max-height: 414px) // iphone xr
   .land
@@ -495,7 +501,7 @@
       left: 50px
     &__players
       width: 680px
-      right: -80px
+      right: -50px
 @media screen and (max-width: 824px) and (max-height: 289px)
   .land
     &__welcome
@@ -505,6 +511,10 @@
     &__players
       width: 460px
       right: 40px
+@media screen and (max-width: 812px) and (max-height: 375px)
+  .land
+    &__players
+      width: 630px
 @media screen and (max-width: 808px) and (max-height: 331px)
   .land
     &__welcome
@@ -524,7 +534,7 @@
         display: none
     &__players
       width: 620px
-      // right: -50px
+      right: -50px
 @media screen and (max-width: 780px) and (max-height: 304px)
   .land
     &__welcome
@@ -588,6 +598,7 @@
   .land
     &__players
       width: 680px
+      right: -50px
 @media screen and (max-width: 717px) and (max-height: 384px)
   .land
     &__players
@@ -617,7 +628,7 @@
       height: 160%
     &__players
       width: 600px
-      right: -60px
+      right: -50px
 
 @media screen and (max-width: 666px) and (max-height: 393px)
   .land
@@ -638,7 +649,7 @@
     &__welcome
       transform: scale(0.5)
       height: 160%
-      left: 80px
+      left: 60px
       padding-top: 20px
     &__players
       width: 520px
@@ -650,11 +661,16 @@
       left: -30px
       height: 130px
     &__welcome
-      left: 20px
-      height: 165%
-      transform: scale(0.48)
+      left: 30px
+      height: 145%
+      transform: scale(0.55)
     &__players
       width: 510px
+      right: -35px  //-70
+@media screen and (max-width: 568px) and (max-height: 320px) // ip se/5
+  .land
+    &__players
+      width: 460px
       right: -70px
 @media screen and (max-width: 553px) and (max-height: 375px) // iphone se + 6/7/8
   .land
@@ -663,7 +679,6 @@
       transform: scale(0.4)
     &__players
       width: 520px
-// @media screen and (max-width: 568px) and (max-height: 320px) // ip se/5
 //   .land
 //     &__players
 
@@ -832,7 +847,7 @@
 @media screen and (max-width: 810px) and (max-height: 1010px) and (orientation: portrait) //ipad air
   .land
     &__players
-      bottom: -40px
+      bottom: -70px
 @media screen and (max-width: 810px) and (max-height: 977px) and (orientation: portrait)
   .land
     &__welcome
@@ -960,23 +975,42 @@
       padding-top: 30px
     &__players
       bottom: 60px
+      transform: scale(1.19)
+      transform-origin: bottom
     &__footer
       transform: translate(-50%) scale(1.1)
     &__partners
       margin-top: 40px
     &__description
       margin-bottom: 10px
-@media screen and (max-width: 540px) and (max-height: 823px) and (orientation: portrait)
+      &::before
+        width: 40%
+@media screen and (max-width: 540px) and (max-height: 823px) and (orientation: portrait) // pixel 2 + surface duo + pixel 2 XL
   .land
+    &__welcome
+      top: 70px
+      transform: scale(1)
     &__players
       bottom: 0
+      transform: scale(1)
+
+    &__partners
+      margin-top: 20px
+    &__footer
+      transform: translate(-50%) scale(0.9)
+@media screen and (max-width: 540px) and (max-height: 720px) and (orientation: portrait)
+  .land
+    &__welcome
+      transform: scale(0.85)
+    &__players
+      bottom: -40px
 @media screen and (max-width: 430px) and (max-height: 932px) and (orientation: portrait)
   .land
     &__footer
       transform: translate(-50%) scale(0.9)
     &__players
       bottom: -7px
-      transform: scale(1.6)
+      transform: scale(1.65)
       transform-origin: bottom
       &::after
         content: ''
@@ -988,17 +1022,13 @@
         background: linear-gradient(180deg, rgba(11, 13, 17, 0.00) 0%, #0B0D11 98.56%, #0B0D11 100%)
         display: block
         width: 100%
+    &__partners
+      margin-top: 20px
 @media screen and (max-width: 412px) and (max-height: 914px) and (orientation: portrait) // A51
   .land
     &__welcome
       top: 100px
-@media screen and (max-width: 540px) and (max-height: 823px) and (orientation: portrait) // pixel 2 + surface duo + pixel 2 XL
-  .land
-    &__welcome
-      top: 70px
-      transform: scale(1)
-    &__footer
-      transform: translate(-50%) scale(0.9)
+
 // @media screen and (max-width: 540px) and (max-height: 720px) and (orientation: portrait) // surface duo
 //   .land
 //     &__welcome
@@ -1022,10 +1052,19 @@
         background: linear-gradient(180deg, rgba(11, 13, 17, 0.00) 0%, #0B0D11 98.56%, #0B0D11 100%)
         display: block
         width: 100%
+@media screen and (max-width: 393px) and (max-height: 844px) and (orientation: portrait)
+  .land
+    &__partners
+      margin-top: 20px
 @media screen and (max-width: 393px) and (max-height: 666px) and (orientation: portrait)
   .land
     &__players
       transform: scale(1.5)
+@media screen and (max-width: 375px) and (orientation: portrait)
+  .land
+    &__description
+      &::before
+        width: 0
 @media screen and (max-width: 375px) and (max-height: 812px) and (orientation: portrait) //iphone X
   .land
     &__footer
@@ -1038,7 +1077,9 @@
       top: 70px
       transform: scale(1)
     &__players
-      bottom: -80px
+      bottom: 0px
+    &__partners
+      margin-top: 20px
 @media screen and (max-width: 375px) and (max-height: 553px) and (orientation: portrait)
   .land
     &__players
@@ -1046,24 +1087,38 @@
       transform: scale(1.4)
     &__footer
       transform: translate(-50%) scale(0.9)
-
-@media screen and (max-width: 360px) and (max-height: 640px) and (orientation: portrait) //galaxy note 2
+@media screen and (max-width: 369px) and (max-height: 768px) and (orientation: portrait) 
+  .land
+    &__players
+      bottom: -4px
+      transform: scale(1)
+@media screen and (max-width: 360px) and (max-height: 745px) and (orientation: portrait) //galaxy note 2
   .land
     &::after
       top: 160px
     &__welcome
       top: 70px
+      transform: scale(0.9)
+      // transform-origin: top
     &__players
-      bottom: -50px
-      // transform: scale(1)
-      // &::after
-      //   display: none
+      bottom: -65px
+      transform: scale(1)
+      &::after
+        display: none
+@media screen and (max-width: 360px) and (max-height: 640px) and (orientation: portrait)
+  .land
+    &__description
+      &::before
+        width: 20%
 @media screen and (max-width: 344px) and (max-height: 882px) and (orientation: portrait) // Z Fold 5
   .land
     &__welcome
       top: 100px
     &__players
-      bottom: 30px
+      transform: scale(1)
+      bottom: 0px
+      &::after
+        display: none
 @media screen and (max-width: 337px) and (max-height: 734px) and (orientation: portrait) //fold
   .land
     &__welcome
