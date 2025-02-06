@@ -7,11 +7,11 @@ $color-orange: #FCC054
 $color-violet: #4E0154
 $color-black: #0C1222
 $color-white: #F0F0F0
+$magenta: #07080D
 
 $dots-opacity: 0.5
 $btn-animation-speed: 1.2s
 $player-animation-speed: 4s
-
 body
   background-color: #1f1168
   overscroll-behavior: none
@@ -75,7 +75,7 @@ body
     display: flex
     flex-direction: column
   &__welcome
-    border: 1px dashed green
+    // border: 1px dashed green
     position: absolute
     left: 30px
     top: 230px
@@ -83,6 +83,7 @@ body
     padding: 72px 0px 0px 10px
     width: 784px
     display: flex
+    justify-content: center
     background: url('../img/cricket.svg') no-repeat 0 0/contain
     // z-index: 5
   &__title
@@ -181,7 +182,7 @@ body
     max-width: 513px
 
   &__players
-    border: 1px dashed red
+    // border: 1px dashed red
     position: absolute
     z-index: 10
     bottom: -10px
@@ -210,7 +211,8 @@ body
     position: absolute
     background: url('../img/light-right.svg') no-repeat 0 0/contain
     animation: 6s infinite rotate-line ease-in-out
-
+  &__footer
+    display: none
 
 .pulse-btn
   animation: $btn-animation-speed infinite pulse-btn ease-in-out
