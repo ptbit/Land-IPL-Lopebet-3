@@ -171,6 +171,7 @@
       transform: scale(0.8)
       max-height: fit-content
       height: 100%
+      left: 50px  
     &__players
       right: -70px
       width: 1050px
@@ -212,6 +213,7 @@
       max-height: fit-content
       height: 105%
       transform: scale(0.8)
+      left: 50px
 
     &__players
       width: 1310px
@@ -615,6 +617,8 @@
       right: -30px
 @media screen and (max-width: 746px) and (max-height: 428px)
   .land
+    &__welcome
+      left: 50px
     &__players
       width: 670px
       right: -50px
@@ -661,7 +665,7 @@
     &__players
       width: 650px
       right: -50px
-@media screen and (max-width: 691px) and (max-height: 655px)
+@media screen and (max-width: 708px) and (max-height: 655px)
   .land
     &__players
       right: -110px
@@ -856,11 +860,9 @@
 @media screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) //ipad pro
   .land
     &__welcome
-      transform: scale(1.2)
+      transform: scale(1.3)
       transform-origin: top
-      top: 90px
-    &__welcome
-      max-width: 670px
+      top: 110px
     &__footer
       transform: translate(-50%) scale(1.3)
       transform-origin: bottom
@@ -950,18 +952,16 @@
       transform: scale(0.65)
     &__players
       bottom: -110px
-      &::after
-        content: ''
-        position: absolute
-        bottom: 70px
-        left: 0
-        right: 0
-        height: 50%
-        background: linear-gradient(180deg, rgba(11, 13, 17, 0.00) 0%, #0B0D11 98.56%, #0B0D11 100%)
-        display: block
-        width: 100%
-
-
+      z-index: 4
+    &__shadow
+      display: block
+      position: absolute
+      bottom: 0
+      right: 0
+      left: 0
+      height: 233px
+      background: linear-gradient(180deg, rgba(11, 13, 17, 0.00) 0%, #0B0D11 98.56%, #0B0D11 100%)
+      z-index: 5
 
 
 // ////////////////////////////////////////////
@@ -990,25 +990,28 @@
       max-height: calc( 100% - 86px )
       padding: 15px 0
       justify-content: center
-      // &::before
-      //   content: ''
-      //   display: block
-      //   width: 100%
-      //   height: 165px
-      //   z-index: 0
-      //   inset: 0
-      //   position: absolute
-      //   background-color: red
-      //   background: url('../img/cricket-mob.svg') no-repeat 0 0/contain
-      //   opacity: 0.7
+      top: 70px
 
     &__partners
       padding: 0
       margin-top: 28px
     &__players
       z-index: 4
-    &__footer
+      bottom: -50px
+      transform: scale(1.85)
+      transform-origin: bottom center
+    &__shadow
+      display: block
+      position: absolute
+      bottom: 0
+      right: 0
+      left: 0
+      height: 233px
+      background: linear-gradient(180deg, rgba(11, 13, 17, 0.00) 0%, #0B0D11 98.56%, #0B0D11 100%)
       z-index: 5
+
+    &__footer
+      z-index: 6
       display: flex
       flex-direction: column
       justify-content: center
@@ -1019,6 +1022,7 @@
       height: fit-content
       min-width: auto
       transform: translateX(-50%) scale(1)
+    
     &__description
       &::before
         z-index: -1
@@ -1034,16 +1038,17 @@
         border-radius: 50%
         border: transparent
         box-shadow: 0 0 90px 95px rgba($oval-shadow-color,1)
+
 @media screen and (max-width: 585px) and (max-height: 1205px) and (orientation: portrait)
   .land
     &__welcome
-      transform: scale(1)
+      transform: scale(1.1)
       top: 120px
       padding-top: 30px
+      max-width: 455px
     &__players
-      bottom: 60px
-      transform: scale(1.19)
-      transform-origin: bottom
+      bottom: -10px
+      transform: scale(1.65)
     &__footer
       transform: translate(-50%) scale(1.1)
     &__partners
@@ -1057,10 +1062,6 @@
     &__welcome
       top: 70px
       transform: scale(1)
-    &__players
-      bottom: 0
-      transform: scale(1)
-
     &__partners
       margin-top: 20px
     &__footer
@@ -1068,67 +1069,29 @@
 @media screen and (max-width: 540px) and (max-height: 720px) and (orientation: portrait)
   .land
     &__welcome
+      top: 60px
       transform: scale(0.85)
     &__players
-      bottom: -40px
+      transform: scale(1.45)
+
 @media screen and (max-width: 430px) and (max-height: 932px) and (orientation: portrait)
   .land
+    &__welcome
+      transform: scale(1)
     &__footer
       transform: translate(-50%) scale(0.9)
     &__players
-      bottom: -7px
-      transform: scale(1.65)
-      transform-origin: bottom
-      &::after
-        content: ''
-        position: absolute
-        bottom: 0
-        left: 0
-        right: 0
-        height: 50%
-        background: linear-gradient(180deg, rgba(11, 13, 17, 0.00) 0%, #0B0D11 98.56%, #0B0D11 100%)
-        display: block
-        width: 100%
+      bottom: -60px
     &__partners
       margin-top: 20px
-@media screen and (max-width: 412px) and (max-height: 914px) and (orientation: portrait) // A51
-  .land
-    &__welcome
-      top: 100px
-
-// @media screen and (max-width: 540px) and (max-height: 720px) and (orientation: portrait) // surface duo
-//   .land
-//     &__welcome
-//       top: 70px
-//       transform: scale(0.87)
-//     &__footer
-//       transform: translate(-50%) scale(0.9)
-@media screen and (max-width: 428px) and (max-height: 760px) and (orientation: portrait)
-  .land
-    &__players
-      bottom: 10px
-      transform: scale(1.6)
-      transform-origin: bottom
-      &::after
-        content: ''
-        position: absolute
-        bottom: 0
-        left: 0
-        right: 0
-        height: 50%
-        background: linear-gradient(180deg, rgba(11, 13, 17, 0.00) 0%, #0B0D11 98.56%, #0B0D11 100%)
-        display: block
-        width: 100%
 @media screen and (max-width: 393px) and (max-height: 844px) and (orientation: portrait)
   .land
     &__partners
       margin-top: 20px
-@media screen and (max-width: 393px) and (max-height: 666px) and (orientation: portrait)
-  .land
-    &__players
-      transform: scale(1.5)
 @media screen and (max-width: 375px) and (orientation: portrait)
   .land
+    &::after
+      top: 200px
     &__description
       &::before
         width: 0
@@ -1136,29 +1099,24 @@
   .land
     &__footer
       transform: translate(-50%) scale(1)
-    &__players
-      bottom: 0px
 @media screen and (max-width: 375px) and (max-height: 667px) and (orientation: portrait) //iphone se
   .land
     &__welcome
       top: 70px
       transform: scale(1)
-    &__players
-      bottom: 0px
     &__partners
       margin-top: 20px
 @media screen and (max-width: 375px) and (max-height: 553px) and (orientation: portrait)
   .land
+    &__welcome
+      top: 60px
+      transform: scale(0.9)
     &__players
-      bottom: -4px
-      transform: scale(1.4)
+      transform: scale(1.3)
     &__footer
       transform: translate(-50%) scale(0.9)
 @media screen and (max-width: 369px) and (max-height: 768px) and (orientation: portrait) 
-  .land
-    &__players
-      bottom: -4px
-      transform: scale(1)
+
 @media screen and (max-width: 360px) and (max-height: 745px) and (orientation: portrait) //galaxy note 2
   .land
     &::after
@@ -1166,41 +1124,27 @@
     &__welcome
       top: 70px
       transform: scale(0.9)
-      // transform-origin: top
-    &__players
-      bottom: -65px
-      transform: scale(1)
-      &::after
-        display: none
 @media screen and (max-width: 360px) and (max-height: 640px) and (orientation: portrait)
   .land
     &__description
       &::before
         width: 20%
+    &__players
+      transform: scale(1.5)
 @media screen and (max-width: 344px) and (max-height: 882px) and (orientation: portrait) // Z Fold 5
   .land
     &__welcome
       top: 100px
-    &__players
-      transform: scale(1)
-      bottom: 0px
-      &::after
-        display: none
 @media screen and (max-width: 337px) and (max-height: 734px) and (orientation: portrait) //fold
   .land
     &__welcome
       top: 80px
-    &__players
-      transform: scale(1)
-      bottom: 0
-      &::after
-        display: none
 @media screen and (max-width: 331px) and (max-height: 808px) and (orientation: portrait) 
   .land
     &__welcome
       top: 70px
     &__players
-      bottom: 0
+      transform: scale(1.85)
 @media screen and (max-width: 320px) and (max-height: 658px) and (orientation: portrait) //galaxy s9+
   .land
     &::after
@@ -1209,12 +1153,14 @@
     &__welcome
       top: 70px
     &__players
-      bottom: -30px
-
+      transform: scale(1.8)
 @media screen and (max-width: 320px) and (max-height: 568px) and (orientation: portrait) //iphone 5se
   .land
+    &__welcome
+      top: 60px
+      padding-top: 15px
     &__players
-      bottom: -70px
+      transform: scale(1.7)
 @media screen and (max-width: 304px) and (max-height: 780px) and (orientation: portrait)
   .land
     &__welcome
@@ -1223,5 +1169,6 @@
   .land
     &__welcome
       top: 70px
+      padding-top: 15px
     &__footer
       transform: translate(-50%) scale(1)
