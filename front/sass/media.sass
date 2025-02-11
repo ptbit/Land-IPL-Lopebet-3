@@ -1126,13 +1126,16 @@
       transform: scale(1.8)
     &__partners
       margin-top: 20px
-//for iphone 13 pro max
-@media screen and (max-width: 428px) and (max-height: 751px) and (orientation: portrait)
+//for iphone 13 pro max + iphone 16plus safari
+@media screen and (max-width: 430px) and (max-height: 751px) and (orientation: portrait)
   .land
     &::after, &::before
       top: 200px
+    &__welcome
+      top: 60px
     &__players
       transform: scale(1.65)
+      bottom: -80px
 @media screen and (max-width: 414px) and (max-height: 896px) and (orientation: portrait)
   .land
     &__players
