@@ -218,11 +218,16 @@
       min-height: 105%
       transform: scale(0.8)
       left: 50px
-
     &__players
       width: 1310px
       right: -100px
       transform: scale(0.8)
+@media screen and (max-width: 1400px) and (max-height: 708px) // for Samsung Galaxy Tab S10 Plus
+  .land
+    &__welcome
+      transform: scale(0.7)
+    &__players
+      width: 1230px
 @media screen and (max-width: 1376px) and (max-height: 958px)
   .land
     &__welcome
